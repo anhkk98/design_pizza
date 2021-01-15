@@ -194,8 +194,11 @@ class _PizzaDetailState extends State<PizzaDetail>
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(10.0),
-                                          child: Image.asset(
-                                              widget.image),
+                                          child: Hero(
+                                            tag: "pizza",
+                                            child: Image.asset(
+                                                widget.image),
+                                          ),
                                         )
                                       ],
                                     ),

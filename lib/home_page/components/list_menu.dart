@@ -17,7 +17,7 @@ class ListMenu extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          itemMenu(Image.asset('assets/menu/pizza.png'),true),
+          itemMenu(Hero(tag: "pizza",child: Image.asset('assets/menu/pizza.png')),true),
           itemMenu(Image.asset('assets/menu/burger.png'),false),
           itemMenu(Image.asset('assets/menu/beer.png'),false),
           itemMenu(Image.asset('assets/menu/ice-cream.png'),false),

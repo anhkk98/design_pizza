@@ -13,6 +13,7 @@ class PizzaOrderDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,), onPressed: (){Navigator.pop(context);}),
         title: Center(
           child: Text("Pizza Order",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.black),),
         ),
