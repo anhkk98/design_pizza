@@ -4,6 +4,9 @@ import 'package:design_pizza/pizza_order/ingredient.dart';
 import 'package:flutter/material.dart';
 
 class PizzaDetail extends StatefulWidget {
+  final image;
+
+  const PizzaDetail({Key key, this.image}) : super(key: key);
   @override
   _PizzaDetailState createState() => _PizzaDetailState();
 }
@@ -192,7 +195,7 @@ class _PizzaDetailState extends State<PizzaDetail>
                                         Padding(
                                           padding: const EdgeInsets.all(10.0),
                                           child: Image.asset(
-                                              'assets/pizza/pizza-1.png'),
+                                              widget.image),
                                         )
                                       ],
                                     ),

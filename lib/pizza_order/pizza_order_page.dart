@@ -1,17 +1,20 @@
 import 'package:design_pizza/pizza_order/pizza_order_detail.dart';
 import 'package:flutter/material.dart';
 
-class PizzaOderPage extends StatefulWidget {
+class PizzaOrderPage extends StatefulWidget {
+  final String image;
+
+  const PizzaOrderPage({Key key, this.image}) : super(key: key);
   @override
-  _PizzaOderPageState createState() => _PizzaOderPageState();
+  _PizzaOrderPageState createState() => _PizzaOrderPageState();
 }
 
-class _PizzaOderPageState extends State<PizzaOderPage> {
+class _PizzaOrderPageState extends State<PizzaOrderPage> {
   @override
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData.light(),
-      child: PizzaOrderDetail(),
+      child: PizzaOrderDetail(image: widget.image,),
     );
   }
 }

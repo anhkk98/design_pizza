@@ -5,7 +5,10 @@ import 'components/pizza_detail.dart';
 import 'components/pizza_item.dart';
 
 class PizzaOrderDetail extends StatelessWidget {
+  final String image;
   double sizeButtonCart = 48;
+
+  PizzaOrderDetail({Key key, this.image}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +32,7 @@ class PizzaOrderDetail extends StatelessWidget {
               elevation: 10,
               child: Column(
                 children: [
-                  Expanded(flex: 3,child: PizzaDetail()),
+                  Expanded(flex: 3,child: PizzaDetail(image: image,)),
                   Expanded(flex: 2,child: PizzaItem(),)
                 ],
               ),
